@@ -9,7 +9,6 @@
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-app-compat.js"></script>
     <script src="https://www.gstatic.com/firebasejs/9.6.0/firebase-database-compat.js"></script>
     <style>
-        /* أنماط CSS بدون تأثيرات الحركة */
         :root {
             --primary-color: #6c5ce7;
             --secondary-color: #a29bfe;
@@ -264,7 +263,6 @@
     </div>
 
     <script>
-        // تكوين Firebase
         const firebaseConfig = {
             apiKey: "AIzaSyCQd2QmmDl7dTW9xgurON5uiOp5rTn0S_c",
             authDomain: "points-d6cfb.firebaseapp.com",
@@ -276,11 +274,9 @@
             measurementId: "G-XL96X9KSMZ"
         };
 
-        // تهيئة Firebase
         const app = firebase.initializeApp(firebaseConfig);
         const database = firebase.database();
 
-        // دالة جلب وعرض البيانات
         function loadUsers() {
             const usersList = document.getElementById('usersList');
             
@@ -333,7 +329,6 @@
             }
         }
 
-        // دالة عرض المستخدمين
         function displayUsers(users) {
             const usersList = document.getElementById('usersList');
             
@@ -386,7 +381,6 @@
             usersList.innerHTML = html;
         }
 
-        // دالة عرض الخطأ
         function showError(error) {
             const usersList = document.getElementById('usersList');
             usersList.innerHTML = `
@@ -398,7 +392,6 @@
             `;
         }
 
-        // تحميل البيانات عند فتح الصفحة
         document.addEventListener('DOMContentLoaded', () => {
             try {
                 loadUsers();
